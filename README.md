@@ -25,6 +25,8 @@ Parts 2 and 3 are performed within AdaptedNeuralNet.ipynb (i.e. training a new m
 
 Note that AdaptedNeuralNet.ipynb currently expects three folders with these exact names (images, labels, and videos). Additional details of AdaptedNeuralNet.ipynb function are included as comments within the notebook. The output of AdaptedNeuralNet.ipynb will be one .npy file per input video that contain predictions for specified objects of the model. These files will be input into the Part 4 application.
 
-<h1>Licensing</h1>
-WORDS
+<h2>Licensing</h2>
+This project is licensed under the MIT License - see the LICENSE file for details.
 
+<h2>Citation</h2>
+If this code is used in work that leads to a scientific publication, we will appreciate acknowledgement of this  by citing the iScience publication (Green II et al. 2024).
