@@ -12,7 +12,7 @@ The workflow for this project includes four essential parts:
     <li>Part 4: Extract descriptive information from the videos (e.g. butterfly heading direction, wingbeat frequency, etc.).</li>
 </ol>
 
-Parts 1 and 4 are provided as independent applications that are available within this repository. Installation instructions for both applications are found in the INSTALLATION file. Part 1 uses LabelImg to specify objects of interest within videos. Part 4 includes code to generate the flight characteristics (e.g. flight time, direction heading, etc.) using custom algorithms to transform the prediction data into something useful).
+Parts 1 and 4 are provided as independent applications that are available within this repository. Installation instructions for both applications are found in the 'INSTALLATION & RUN' file. Part 1 uses LabelImg to specify objects of interest within videos. Part 4 includes code to generate the flight characteristics (e.g. flight time, direction heading, etc.) using custom algorithms to transform the prediction data into something useful).
 
 Parts 2 and 3 are performed within AdaptedNeuralNet.ipynb (i.e. training a new model and running this model on a set of videos).  The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
 <br/><br/>
