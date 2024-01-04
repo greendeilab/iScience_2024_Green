@@ -79,3 +79,17 @@ Here's a useful table of shortcuts:
     <td>Previous image</td>
   </tr>
 </table>
+
+<h3>Producing the Excel file</h3>
+<p>In order to produce the Excel file with predictions you need to follow this procedure:</p>
+<ul>
+<li>Run the following commands if you have closed the window with the application (this is what happens 99% of the time):</li>
+
+    conda activate df
+    cd (Directory where application is stored)
+    python main.py
+<li>Choose the Prediction Analysis. <br> *If you <strong>DO</strong> have compass files, upload them in the same folder with other labels <strong>AND</strong> select <strong>Calibrate setup.</strong> If you <strong>DON'T</strong> have compass files deselect Calibrate setup. </li>
+
+![Prediction Analysis Tab](./readme_images/prediction-analysis-frame.png?raw=true)
+<li>Run the analysis.</li>
+</ul>
