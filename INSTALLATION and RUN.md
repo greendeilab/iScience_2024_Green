@@ -80,6 +80,8 @@ Here's a useful table of shortcuts:
   </tr>
 </table>
 
+<h2>Running Part 4</h2>
+
 <h3>Producing the Excel file</h3>
 <p>In order to produce the Excel file with predictions you need to follow this procedure:</p>
 <ul>
