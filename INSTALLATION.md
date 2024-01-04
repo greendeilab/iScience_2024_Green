@@ -10,7 +10,7 @@
     git config --global user.email yourname@email.com
 
 3. Clone the repository by running the following command (if the repository is private make sure you're added as a contributor otherwise you'll be denied access): 
-    > git clone https://github.com/greendeilab/directional-flight.git
+    > git clone https://github.com/greendeilab/iScience_2024_Green.git
 
     - You may need to specify your username and password. In this instance, the username is your github account name and the password is a personal access token. To create this token, go to: 
         -  Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Generate New Token
