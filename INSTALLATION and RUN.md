@@ -27,3 +27,22 @@
   
 7. Assuming you're still in the /application directory, now run the application by using the following command:
     > python main.py
+
+<h2>Running Part 1</h2>
+
+<h3 id="training">Extracting images</h3>
+In order to extract images you need to follow the first page of the application <strong>Image Extraction</strong>. Select the folder with your videos and extract the number of images that you will require for training your model (this will depend on the size and complexity of your dataset). 
+
+<h3 id="training">Creating the dataset</h3>
+
+<p> After installing the console and extracting the frames you can begin the next stage of the pipeline. Write the following commands</p>
+
+> pip install LabelImg </br>
+> LabelImg
+
+<p>You should select <strong>YOLO</strong> and change your save directory to the path where you're planning to store labels for the <strong>images.</strong></p>
+
+You need to follow this procedure in order to select every label correctly, and perform the correct analysis:
+<ul>
+<li> Click 'Change Save Dir' and switch it to the folder where you intend to store labels. Preferably call it <strong>labels.</strong></li>
+<li> Use 'CreateRectBox' and select an object you want.
