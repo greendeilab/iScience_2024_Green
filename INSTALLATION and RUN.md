@@ -28,6 +28,8 @@
 7. Assuming you're still in the /application directory, now run the application by using the following command:
     > python main.py
 
+The installed program contains the code for performing both Part 1 (image labeling) and Part 4 (video analysis).
+
 <h2>Running Part 1</h2>
 
 <h3 id="training">Extracting images</h3>
@@ -46,3 +48,34 @@ You need to follow this procedure in order to select every label correctly, and 
 <ul>
 <li> Click 'Change Save Dir' and switch it to the folder where you intend to store labels. Preferably call it <strong>labels.</strong></li>
 <li> Use 'CreateRectBox' and select an object you want.
+
+<li>After you created rectangular boxes for everything you want to identify click <strong>Ctrl+S</strong> and go to the next picture.</li>
+</li>
+</ul>
+Here's a useful table of shortcuts:
+<table>
+  <tr>
+    <th>Shortcut</th>
+    <th>Function</th>
+  </tr>
+  <tr>
+    <td>Ctrl + s</td>
+    <td>Save the current prediction</td>
+  </tr>
+  <tr>
+    <td>Ctrl + Shift + d</td>
+    <td>Delete current image from the dataset</td>
+  </tr>
+  <tr>
+    <td>w</td>
+    <td>Create a rectangular box</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td>Next image</td>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>Previous image</td>
+  </tr>
+</table>
