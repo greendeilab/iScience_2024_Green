@@ -12,7 +12,7 @@ The workflow for this project includes four essential parts:
     <li>Part 4: Extract descriptive information from the videos (e.g. butterfly heading direction, wingbeat frequency, etc.).</li>
 </ol>
 
-Parts 1 and 4 are provided as independent applications that are available within this repository. Installation instructions for both applications are found in the 'INSTALLATION & RUN' file. Part 1 uses LabelImg to specify objects of interest within videos. Part 4 includes code to generate the flight characteristics (e.g. flight time, direction heading, etc.) using custom algorithms to transform the prediction data into something useful).
+Parts 1 and 4 are provided as an independent application that is available within this repository. Installation and running instructions for both parts are found in the 'INSTALLATION & RUN' file. Part 1 uses LabelImg to specify objects of interest within videos. Part 4 includes code to generate the flight characteristics (e.g. flight time, direction heading, etc.) using custom algorithms to transform the prediction data into something useful).
 
 Parts 2 and 3 are performed within AdaptedNeuralNet.ipynb (i.e. training a new model and running this model on a set of videos).  The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
 <br/><br/>
@@ -26,7 +26,7 @@ Parts 2 and 3 are performed within AdaptedNeuralNet.ipynb (i.e. training a new m
 Note that AdaptedNeuralNet.ipynb currently expects three folders with these exact names (images, labels, and videos). Additional details of AdaptedNeuralNet.ipynb function are included as comments within the notebook. The output of AdaptedNeuralNet.ipynb will be one .npy file per input video that contain predictions for specified objects of the model. These files will be input into the Part 4 application.
 
 <h2>Licensing</h2>
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GNU General Public License v.3.0.
 
 <h2>Citation</h2>
 If this code is used in work that leads to a scientific publication, we will appreciate acknowledgement of this  by citing the iScience publication (Green II et al. 2024).
