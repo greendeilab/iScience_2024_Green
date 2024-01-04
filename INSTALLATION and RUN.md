@@ -1,4 +1,4 @@
-<h1>Installation</h1>
+<h1>Installation and Running Parts 1, 4</h1>
 
 1. Pull up your terminal on your local computer and ensure that git and anaconda is installed (if you have a windows machine, you'll have a separate terminal called 'Anaconda Prompt'). You can do this by running the following commands:
     > git --version<br/>
