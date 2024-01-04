@@ -23,7 +23,7 @@ Parts 2 and 3 are performed within AdaptedNeuralNet.ipynb (i.e. training a new m
     <li>videos: videos to be analyzed by the model</li>
 </ol>
 
-Note that AdaptedNeuralNet.ipynb currently expects three folders with these exact names (images, labels, and videos). Additional details of AdaptedNeuralNet.ipynb function are included as comments within the notebook. The output of AdaptedNeuralNet.ipynb will be one .npy file per input video that contain predictions for specified objects of the model. 
+Note that AdaptedNeuralNet.ipynb currently expects three folders with these exact names (images, labels, and videos). Additional details of AdaptedNeuralNet.ipynb function are included as comments within the notebook. The output of AdaptedNeuralNet.ipynb will be one .npy file per input video that contain predictions for specified objects of the model. These files will be input into the Part 4 application.
 
 <h1>Licensing</h1>
 WORDS
