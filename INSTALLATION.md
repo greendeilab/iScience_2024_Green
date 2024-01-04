@@ -15,7 +15,7 @@
     - You may need to specify your username and password. In this instance, the username is your github account name and the password is a personal access token. To create this token, go to: 
         -  Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Generate New Token
     
-4. Navigate to the folder you just downloaded and go into /application
+4. Navigate to the folder you just downloaded and go into /src
 
 5. For MacOS users: in the anaconda prompt, run the following command to create the necessary environment to run the program:
     > conda create -n df --file env.yml 
