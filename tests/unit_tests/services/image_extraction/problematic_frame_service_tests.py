@@ -6,7 +6,7 @@ sys.path.append('../../')
 from application.backend.components.problematic_frame_finder import ProblematicFrameFinder
 
 # Function names must be in camel case to be recognized by the unittest library
-class ProblematicFrameFinderTestSuite(unittest.TestCase):
+class ProblematicFrameServiceTests(unittest.TestCase):
 
 	def setUp(self):
 		prediction_file_directory = ''

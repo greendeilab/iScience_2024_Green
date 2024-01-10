@@ -5,7 +5,7 @@ sys.path.append('../../')
 from application.backend.components.video import Video
 
 # Function names must be in camel case to be recognized by the unittest library
-class VideoTestSuite(unittest.TestCase):
+class VideoServiceTests(unittest.TestCase):
 
 	def setUp(self):
 		video = ''

@@ -1,13 +1,13 @@
 from controller import Controller
 from view.view import View
 #from orchestrators.image_extractor import ImageExtractor
-from orchestrators.prediction_analyzer import PredictionAnalyzer
+from orchestrators.prediction_analysis import PredictionAnalysisOrchestrator
 import sys 
 from PyQt5 import QtWidgets as qtw
 
 def main(view):
 	#image_extractor = ImageExtractor()
-	prediction_analyzer = PredictionAnalyzer()
+	prediction_analyzer = PredictionAnalysisOrchestrator()
 	controller = Controller(view, None, prediction_analyzer)
 
 if __name__ == "__main__":

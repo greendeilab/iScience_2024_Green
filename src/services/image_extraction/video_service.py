@@ -6,7 +6,7 @@ import random as r
     This class is reponsible for opening videos, getting video characteristics,
     and extracting frames.
 '''
-class Video():
+class VideoService():
 
     def __init__(self, video, num_frames_per_video, problematic_frames, file_directory, save_directory):
         self.video = video

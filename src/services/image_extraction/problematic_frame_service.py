@@ -1,9 +1,11 @@
-
 import numpy as np 
 from utils.file_handler import FileHandler
 from utils.object_location_finder import ObjectLocationFinder 
 
-class ProblematicFrameFinder():
+'''
+	Finds all 'problematic' frames associated with the provided prediction files/videos.
+'''
+class ProblematicFrameService():
 
 	def __init__(self, prediction_file_directory, num_unique_objects, all_videos):
 		self.prediction_file_directory = prediction_file_directory

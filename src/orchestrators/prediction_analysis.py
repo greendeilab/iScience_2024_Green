@@ -10,7 +10,7 @@ import time
     Users have the option to calibrate the setup so the resulting monarch flight vector 
     is relative to north. Otherwise, users get the vectors as they appear in the videos.
 '''
-class PredictionAnalyzer(Process):
+class PredictionAnalysisOrchestrator(Process):
 
     def __init__(self):
         super().__init__()
@@ -82,8 +82,7 @@ class PredictionAnalyzer(Process):
             trial_label_map = label_map
         else:
             compass_label_map = {'origin': 0, 'north': 1}
-            trial_label_map = {'head': 0, 'origin': 1, 'body': 2} # for migration trials
-            #trialLabelMap = {'head': -1, 'origin': 0, 'body': 1} # for foraging
+            trial_label_map = {'head': 0, 'origin': 1, 'body': 2}
 
         return compass_label_map, trial_label_map
 
