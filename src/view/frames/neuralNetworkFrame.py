@@ -1,1 +1,0 @@
-#here should be all the parameters of the neural network
