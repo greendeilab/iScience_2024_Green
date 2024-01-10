@@ -3,7 +3,7 @@ import sys
 
 sys.path.append('../src')
 from integration_tests.utils.file_utils_tests import *
-from integration_tests.utils.compass_utils_tests import *
+from integration_tests.utils.prediction_analysis.compass_utils_tests import *
 
 class IntegrationTestsTestSuite(unittest.TestSuite):
 

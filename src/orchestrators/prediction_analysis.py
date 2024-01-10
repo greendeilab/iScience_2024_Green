@@ -1,7 +1,7 @@
 from PyQt5 import QtCore as qtc 
 from .process import Process 
-from services.prediction_analysis.compass_file_service import CompassFileService
-from services.prediction_analysis.trial_file_service import TrialFileService
+from services.compass_file_service import CompassFileService
+from services.trial_file_service import TrialFileService
 from utils import file_utils as f
 import time 
 
