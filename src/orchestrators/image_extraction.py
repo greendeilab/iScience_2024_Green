@@ -1,11 +1,10 @@
 import os
 import random as r
 from PyQt5 import QtCore as qtc
-from .process import Process 
-from services.image_extraction.video import Video
-from services.image_extraction.problematic_frame_finder import ProblematicFrameFinder
-from utils.file_handler import FileHandler 
-
+from .process import Process
+from utils.image_extraction import video_utils as v
+from utils.image_extraction import problematic_frame_utils as p
+from utils import file_utils as f 
 
 '''
     This class coordinates the extraction of images from videos (.MOV) 
@@ -24,13 +23,11 @@ class ImageExtractionOrchestrator(Process):
         self.extract_problematic_frames = False
         self.find_duplicate_objects = False
         self.find_missing_objects = False
-        self.problematic_frame_info = {}
         self.prediction_file_directory = ''
         self.num_unique_objects = 0
 
     def run(self):
-        file_handler = FileHandler(self.file_directory)
-        all_videos = file_handler.get_all_videos()
+        all_videos = f.get_all_videos()
         self.total_tasks = self.num_videos_to_process if len(all_videos) >= self.num_videos_to_process else len(all_videos)
         type_frame = 'random'
 
@@ -39,12 +36,11 @@ class ImageExtractionOrchestrator(Process):
             self.total_tasks += 2
 
             self.next_step("\tFinding problematic frames...")
-            problematic_frame_finder = ProblematicFrameFinder(self.prediction_file_directory, self.num_unique_objects, all_videos)
-            self.problematic_frame_info = problematic_frame_finder.locate_all()
+            problematic_frame_info = p.locate_all(self.prediction_file_directory, self.num_unique_objects, all_videos)
             self.task_completed()       
 
             self.next_step("\tGetting videos...")
-            videos_to_process = self.select_most_problematic_videos()
+            videos_to_process = self.select_most_problematic_videos(problematic_frame_info)
             self.task_completed()
         else:     
             self.total_tasks += 1
@@ -55,21 +51,19 @@ class ImageExtractionOrchestrator(Process):
         self.next_step(f"\tExtracting {type_frame} frames...")
         for video in videos_to_process:
             problematic_frames = self.get_problematic_frames(video) if self.extract_problematic_frames else []
-            video = Video(video, self.num_frames_per_video, problematic_frames, self.file_directory, self.save_directory)
-            video.initialize()
-            video.extract_and_save_frames()
+            video.extract_and_save(self.file_directory, self.save_directory, video, self.num_frames_per_video, problematic_frames)
             self.task_completed()
 
         self.finished_process()
 
-    def select_most_problematic_videos(self):
+    def select_most_problematic_videos(self, problematic_frame_info):
         '''
             Videos are given a score which indicates the number of problematic 
             frames they contain. The videos with the highest score are selected.
         '''
         most_problematic_videos = []
         scores = []
-        for video, problems in self.problematic_frame_info.items():
+        for video, problems in problematic_frame_info.items():
             score = 0
 
             num_duplicate_object_frames = len(problems['duplicate_object_frames'])
@@ -116,10 +110,10 @@ class ImageExtractionOrchestrator(Process):
         else:   
             return False
 
-    def get_problematic_frames(self, video):
+    def get_problematic_frames(self, video, problematic_frame_info):
         problematic_frames = []
-        duplicate_object_frames = self.problematic_frame_info[video]['duplicate_object_frames']
-        missing_object_frames = self.problematic_frame_info[video]['missing_object_frames']
+        duplicate_object_frames = problematic_frame_info[video]['duplicate_object_frames']
+        missing_object_frames = problematic_frame_info[video]['missing_object_frames']
 
         # If the user wants images with missing objects and duplicate objects,
         # ensure that the number of instances for each problem is equal to prevent training bias
