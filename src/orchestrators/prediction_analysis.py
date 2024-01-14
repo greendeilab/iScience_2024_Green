@@ -46,6 +46,7 @@ class PredictionAnalysisOrchestrator(Process):
                                               trial_label_map, 
                                               north_angles)
         all_trial_statistics = trial_file_service.process_trial_files(trial_files)
+        all_trial_statistics = sorted(all_trial_statistics, key=lambda x: x[0])
 
         f.save_results(self.save_directory, all_trial_statistics, self.name_excel_file)
         self.task_completed()

@@ -14,6 +14,7 @@ def locate_all(file_directory, num_unique_objects, all_videos):
 			problematic_frame_info.setdefault(video, {})
 			predictions = f.open_prediction_file(f'{file_directory}/{file}');
 			duplicate_object_frames, missing_object_frames = find_problems(predictions, num_unique_objects)
+
 			problematic_frame_info[video].setdefault('duplicate_object_frames', duplicate_object_frames)
 			problematic_frame_info[video].setdefault('missing_object_frames', missing_object_frames)
 

@@ -27,9 +27,10 @@ class ImageExtractionOrchestrator(Process):
         self.num_unique_objects = 0
 
     def run(self):
-        all_videos = f.get_all_videos()
+        all_videos = f.get_all_videos(self.file_directory)
         self.total_tasks = self.num_videos_to_process if len(all_videos) >= self.num_videos_to_process else len(all_videos)
         type_frame = 'random'
+
 
         if self.extract_problematic_frames:
             type_frame = 'problematic'
@@ -50,8 +51,9 @@ class ImageExtractionOrchestrator(Process):
 
         self.next_step(f"\tExtracting {type_frame} frames...")
         for video in videos_to_process:
-            problematic_frames = self.get_problematic_frames(video) if self.extract_problematic_frames else []
-            video.extract_and_save(self.file_directory, self.save_directory, video, self.num_frames_per_video, problematic_frames)
+            print(problematic_frame_info)
+            problematic_frames = self.get_problematic_frames(video, problematic_frame_info) if self.extract_problematic_frames else []
+            v.extract_and_save(self.file_directory, self.save_directory, video, self.num_frames_per_video, problematic_frames)
             self.task_completed()
 
         self.finished_process()
