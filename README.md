@@ -11,7 +11,7 @@ The workflow for this project includes four essential parts:
     <li>Extracting descriptive information from the videos (e.g. butterfly heading direction, wingbeat frequency, etc.).</li>
 </ol>
 
-To complete Parts 1 & 4, you'll need to use the Python application found in this repository. Note that this can be run on your local machine. Parts 2 & 3 are expected to be run on Google Colab (or a machine with a GPU) using the provided notebook 'AdaptedNeuralNet.ipynb'. Installation and running instructions can be found in the 'INSTALLATION & RUN' file.
+To complete Parts 1 & 4, you'll need to use the Python application found in this repository. This portion of the workflow can be completed on your own machine. Conversely, Parts 2 & 3 will need to be done using Google Colab and the provided notebook 'AdaptedNeuralNet.ipynb'. Installation and running instructions can be found in the 'INSTALLATION & RUN' file.
 
 <h2>Author</h2>
 Primary author and maintainer of the code found here is Sean Polidori (seanpolidori0@gmail.com). 
