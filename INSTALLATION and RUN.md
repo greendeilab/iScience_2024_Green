@@ -1,6 +1,6 @@
 <h1>Prerequisites</h1>
 
-<h1>Installation and Running Parts 1, 4</h1>
+<h1>Part 1</h1>
 
 1. Pull up your terminal on your local computer and ensure that git and anaconda is installed (if you have a windows machine, you'll have a separate terminal called 'Anaconda Prompt'). You can do this by running the following commands:
     > git --version<br/>
@@ -32,7 +32,7 @@
 
 The installed program contains the code for performing both Part 1 (image labeling) and Part 4 (video analysis).
 
-<h2>Running Part 1</h2>
+<h1>Part 2</h1>
 
 <h3 id="training">Extracting images</h3>
 In order to extract images you need to follow the first page of the application <strong>Image Extraction</strong>. Select the folder with your videos and extract the number of images that you will require for training your model (this will depend on the size and complexity of your dataset). 
@@ -82,7 +82,7 @@ Here's a useful table of shortcuts:
   </tr>
 </table>
 
-<h2>Parts 2 & 3</h2>
+<h1>Part 3</h1>
 The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
 <br/><br/>
 
@@ -97,7 +97,7 @@ Note that AdaptedNeuralNet.ipynb currently expects three folders with these exac
 <li>Run the analysis.</li>
 </ul>
 
-<h2>Running Part 4</h2>
+<h1>Part 4</h1>
 
 <h3>Producing the Excel file</h3>
 <p>In order to produce the Excel file with predictions you need to follow this procedure:</p>
