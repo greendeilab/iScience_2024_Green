@@ -80,6 +80,21 @@ Here's a useful table of shortcuts:
   </tr>
 </table>
 
+<h2>Parts 2 & 3</h2>
+The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
+<br/><br/>
+
+<ol>
+    <li>images: images to be used for training</li>
+    <li>labels: labeled images that are the output of LabelImg </li>
+    <li>videos: videos to be analyzed by the model</li>
+</ol>
+
+Note that AdaptedNeuralNet.ipynb currently expects three folders with these exact names (images, labels, and videos). Additional details of AdaptedNeuralNet.ipynb function are included as comments within the notebook. The output of AdaptedNeuralNet.ipynb will be one .npy file per input video that contain predictions for specified objects of the model. These files will be input into the Part 4 application.
+![Prediction Analysis Tab](./readme_images/prediction-analysis-frame.png?raw=true)
+<li>Run the analysis.</li>
+</ul>
+
 <h2>Running Part 4</h2>
 
 <h3>Producing the Excel file</h3>
@@ -91,7 +106,3 @@ Here's a useful table of shortcuts:
     cd (Directory where application is stored)
     python main.py
 <li>Choose the Prediction Analysis. <br> *If you <strong>DO</strong> have compass files, upload them in the same folder with other labels <strong>AND</strong> select <strong>Calibrate setup.</strong> If you <strong>DON'T</strong> have compass files deselect Calibrate setup. </li>
-
-![Prediction Analysis Tab](./readme_images/prediction-analysis-frame.png?raw=true)
-<li>Run the analysis.</li>
-</ul>
