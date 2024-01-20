@@ -5,15 +5,15 @@ The workflow for this project includes four essential parts:
 <br/><br/>
 
 <ol>
-    <li>Part 1: Build training and test image sets for model training in LabelImg.</li>
-    <li>Part 2: Train a computer vision model to identify the monarch as well as any key characteristics of our setup.</li>
-    <li>Part 3: Run the model on input videos (i.e. have our model predict on each frame of our videos).</li>
-    <li>Part 4: Extract descriptive information from the videos (e.g. butterfly heading direction, wingbeat frequency, etc.).</li>
+    <li>Part 1: Building a training set</li>
+    <li>Part 2: Training a computer vision model</li>
+    <li>Part 3: Processing videos with the trained model</li>
+    <li>Part 4: Extracting descriptive information from the videos (e.g. butterfly heading direction, wingbeat frequency, etc.).</li>
 </ol>
 
-Parts 1 and 4 are provided as an independent application that is available within this repository. Installation and running instructions for both parts are found in the 'INSTALLATION & RUN' file. Part 1 uses LabelImg to specify objects of interest within videos. Part 4 includes code to generate the flight characteristics (e.g. flight time, direction heading, etc.) using custom algorithms to transform the prediction data into something useful).
+To complete Parts 1 & 4, you'll need to use the Python application found in this repository. Note that this can be run on your local machine. Parts 2 & 3 are expected to be run on Google Colab (or a machine with a GPU) using the provided notebook 'AdaptedNeuralNet.ipynb'. Installation and running instructions can be found in the 'INSTALLATION & RUN' file.
 
-Parts 2 and 3 are performed within AdaptedNeuralNet.ipynb (i.e. training a new model and running this model on a set of videos).  The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
+The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
 <br/><br/>
 
 <ol>
