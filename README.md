@@ -6,7 +6,7 @@ The workflow for this project includes four essential parts:
     <li>Building a training set</li>
     <li>Training a computer vision model</li>
     <li>Processing videos with the trained model</li>
-    <li>Extracting descriptive information from the videos (e.g. butterfly heading direction, wingbeat frequency, etc.).</li>
+    <li>Extracting descriptive information from the predictions (i.e, obtaining flight duration, heading, etc.)</li>
 </ol>
 
 To complete Parts 1 & 4, you'll need to use the Python application found in this repository. This portion of the workflow can be completed on your own machine. Conversely, Parts 2 & 3 will need to be done using Google Colab and the provided notebook 'AdaptedNeuralNet.ipynb'. Installation and running instructions can be found in the 'INSTALLATION & RUN' file.
