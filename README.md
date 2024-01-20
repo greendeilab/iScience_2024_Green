@@ -13,17 +13,6 @@ The workflow for this project includes four essential parts:
 
 To complete Parts 1 & 4, you'll need to use the Python application found in this repository. Note that this can be run on your local machine. Parts 2 & 3 are expected to be run on Google Colab (or a machine with a GPU) using the provided notebook 'AdaptedNeuralNet.ipynb'. Installation and running instructions can be found in the 'INSTALLATION & RUN' file.
 
-The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
-<br/><br/>
-
-<ol>
-    <li>images: images to be used for training</li>
-    <li>labels: labeled images that are the output of LabelImg </li>
-    <li>videos: videos to be analyzed by the model</li>
-</ol>
-
-Note that AdaptedNeuralNet.ipynb currently expects three folders with these exact names (images, labels, and videos). Additional details of AdaptedNeuralNet.ipynb function are included as comments within the notebook. The output of AdaptedNeuralNet.ipynb will be one .npy file per input video that contain predictions for specified objects of the model. These files will be input into the Part 4 application.
-
 <h2>Author</h2>
 Primary author and maintainer of the code found here is Sean Polidori (seanpolidori0@gmail.com). 
 
