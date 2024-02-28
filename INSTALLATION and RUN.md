@@ -1,5 +1,5 @@
 <h1>Prerequisites</h1>
-Before you can start the workflow below, you'll need to setup your local environment. Thankfully, all you need is a version of anaconda and git (miniconda works as well). You can download anaconda at the following <a href="https://www.anaconda.com/download">link</a>. Additionally, you can install git from <a href="https://git-scm.com/downloads">here</a>.
+Before you can start the workflow below, you'll need to setup your local environment. Thankfully, all you need is a version of anaconda and git (miniconda works as well). You can download anaconda at the following <a href="https://www.anaconda.com/download" target="_blank">link</a>. Additionally, you can install git from <a href="https://git-scm.com/downloads" target="_blank">here</a>.
 
 Once you have these installed, complete the following steps:
 
