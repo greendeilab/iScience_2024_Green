@@ -1,20 +1,21 @@
 <h1>Prerequisites</h1>
+Before you can start the workflow below, you'll need to setup your local environment. Thankfully, all you need is a version of anaconda and git (miniconda works as well). You can download anaconda at the following <a href="https://www.anaconda.com/download">link</a>. Additionally, you can install git from <a href="https://git-scm.com/downloads">here</a>.
 
-<h1>Part 1</h1>
+Once you have these installed, complete the following steps:
 
-1. Pull up your terminal on your local computer and ensure that git and anaconda is installed (if you have a windows machine, you'll have a separate terminal called 'Anaconda Prompt'). You can do this by running the following commands:
+1. Pull up your terminal on your computer and ensure that git and anaconda is installed (if you have a windows machine, you'll have a separate terminal called 'Anaconda Prompt'). You can verify installation by running the following commands:
     > git --version<br/>
     > conda --version
 
 2. If this is your first time using git, change the username and email on your machine with the following commands (the email should be the one you used to create your github account):
 
     > git config --global user.name "Your name"<br/>
-    git config --global user.email yourname@email.com
+    > git config --global user.email yourname@email.com
 
 3. Clone the repository by running the following command: 
     > git clone https://github.com/greendeilab/iScience_2024_Green.git
 
-    - You may need to specify your username and password. In this instance, the username is your github account name and the password is a personal access token. To create this token, go to: 
+    - You may need to specify your username and password. In this instance, the username is your github account name and the password is a personal access token. If you're not familiar with access tokens, they're essentially secret values that you can use to authenticate yourself. These are highly confidential and should not be shared with anyone. To create this token, go to: 
         -  Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Generate New Token
     
 4. Navigate to the folder you just downloaded and go into /src
@@ -22,17 +23,24 @@
 5. For MacOS users: in the anaconda prompt, run the following command to create the necessary environment to run the program:
     > conda create -n df --file env.yml 
 - For windows users: in the anaconda prompt, run the following command to create the necessary environment to run the program:
-  > conda create --file environment.yml
+    > conda create --file environment.yml
 
-6. Once the environment has been installed, activate it by using the following command:
+6. Once the environment has been created, activate it by using the following command:
     > conda activate df 
   
-7. Assuming you're still in the /application directory, now run the application by using the following command:
+7. Assuming you're still in the /src directory, now run the application by using the following command:
     > python main.py
 
-The installed program contains the code for performing both Part 1 (image labeling) and Part 4 (video analysis).
+You should now see an application with two tabs:
 
-<h1>Part 2</h1>
+![Image Extraction Tab](./readme_images/image-extraction-frame.png?raw=true)
+
+
+![Prediction Analysis Tab](./readme_images/prediction-analysis-frame.png?raw=true)
+
+As you can probably infer, the first tab will be used to create out training set. We'll be able to point it to a set of videos, it'll then extract frames at random and save them in a folder. The lower portion of the tab is specific to retraining. If your initial model wrongly identifies objects or it doesn't even recognize them in certain frames, you can utilize this portion to extract those specific frames.
+
+<h1>Part 1: Image Extraction</h1>
 
 <h3 id="training">Extracting images</h3>
 In order to extract images you need to follow the first page of the application <strong>Image Extraction</strong>. Select the folder with your videos and extract the number of images that you will require for training your model (this will depend on the size and complexity of your dataset). 
