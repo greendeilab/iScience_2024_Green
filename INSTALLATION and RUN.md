@@ -15,7 +15,7 @@ Once you have these installed, complete the following steps:
 3. Clone the repository by running the following command: 
     > git clone https://github.com/greendeilab/iScience_2024_Green.git
 
-    - You may need to specify your username and password. In this instance, the username is your github account name and the password is a personal access token. If you're not familiar with access tokens, they're essentially secret values that you can use to authenticate yourself. These are highly confidential and should not be shared with anyone. To create this token, go to: 
+    - You may need to specify your username and password. In this instance, the username is your github account name and the password is a personal access token. If you're not familiar with access tokens, they're essentially secret values that you can use to authenticate yourself. They are highly confidential and should not be shared with anyone. To create this token, go to: 
         -  Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Generate New Token
     
 4. Navigate to the folder you just downloaded and go into /src
@@ -38,7 +38,7 @@ You should now see an application with two tabs:
 
 ![Prediction Analysis Tab](./readme_images/prediction-analysis-frame.png?raw=true)
 
-As you can probably infer, the first tab will be used to create out training set. We'll be able to point it to a set of videos, it'll then extract frames at random and save them in a folder. The lower portion of the tab is specific to retraining. If your initial model wrongly identifies objects or it doesn't even recognize them in certain frames, you can utilize this portion to extract those specific frames.
+As you can probably infer, the first tab will be used to create our training set. We'll be able to point it to a set of videos, it'll then extract frames at random and save them in a folder. The lower portion of the tab is specific to retraining. If your initial model wrongly identifies objects or it if completely misses them in certain frames, you can utilize this portion to extract those specific ones.
 
 <h1>Part 1: Image Extraction</h1>
 
