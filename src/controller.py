@@ -2,7 +2,7 @@ from PyQt5 import QtCore as qtc
 
 '''
 	The main purpose of the controller is to act an intermediary between the
-	frontend and backend. Whenever user input is received by the view which 
+	view and the orchestrators. Whenever user input is received by the view which 
 	requires some logic to be performed, this class will be responsible for 
 	calling the correct functions. Additionally, any progress that is logged 
 	by the backend, will be sent to the view through this class. 
