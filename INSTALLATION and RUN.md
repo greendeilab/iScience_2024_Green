@@ -40,12 +40,12 @@ You should now see an application with two tabs:
 
 As you can probably infer, the first tab will be used to create our training set. We'll be able to point it to a set of videos, it'll then extract frames at random and save them in a folder. The lower portion of the tab is specific to retraining. If your initial model wrongly identifies objects or it if completely misses them in certain frames, you can utilize this portion to extract those specific ones.
 
-<h1>Part 1: Image Extraction</h1>
+<h1>Part 1: Building a Training Set</h1>
 
-<h3 id="training">Extracting images</h3>
+<h2 id="training">Extracting images</h2>
 In order to extract images you need to follow the first page of the application <strong>Image Extraction</strong>. Select the folder with your videos and extract the number of images that you will require for training your model (this will depend on the size and complexity of your dataset). 
 
-<h3 id="training">Creating the dataset</h3>
+<h2 id="training">Creating the dataset</h2>
 
 <p> After installing the console and extracting the frames you can begin the next stage of the pipeline. Write the following commands</p>
 
