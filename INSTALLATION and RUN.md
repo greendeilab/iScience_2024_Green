@@ -1,3 +1,9 @@
+<h1>Table of Contents</h1>
+<a href="#p1">Part 1: Building a Training Set</a>
+<a href="#p2">Part 2: Training a Computer Vision Model</a>
+<a href="#p3">Part 3: Processing Videos with the Trained Model</a>
+<a href="#p4">Part 4: Extracting Descriptive Information</a>
+
 <h1>Prerequisites</h1>
 Before you can start the workflow below, you'll need to setup your local environment. Thankfully, all you need is a version of anaconda and git (miniconda works as well). You can download anaconda at the following <a href="https://www.anaconda.com/download" target="_blank">link</a>. Additionally, you can install git from <a href="https://git-scm.com/downloads" target="_blank">here</a>.
 
@@ -40,12 +46,12 @@ You should now see an application with two tabs:
 
 As you can probably infer, the first tab will be used to create our training set. We'll be able to point it to a set of videos, it'll then extract frames at random and save them in a folder. The lower portion of the tab is specific to retraining. If your initial model wrongly identifies objects or it if completely misses them in certain frames, you can utilize this portion to extract those specific ones.
 
-<h1>Part 1: Building a Training Set</h1>
+<h1 id="p1">Part 1: Building a Training Set</h1>
 
 <h2 id="training">Extracting images</h2>
 In order to extract images you need to follow the first page of the application <strong>Image Extraction</strong>. Select the folder with your videos and extract the number of images that you will require for training your model (this will depend on the size and complexity of your dataset). 
 
-<h2 id="training">Creating the dataset</h2>
+<h2 id="training">Annotations</h2>
 
 <p> After installing the console and extracting the frames you can begin the next stage of the pipeline. Write the following commands</p>
 
@@ -90,7 +96,9 @@ Here's a useful table of shortcuts:
   </tr>
 </table>
 
-<h1>Part 3</h1>
+<h1 id="p2">Part 2: Training a Computer Vision Model</h1>
+
+<h1 id="p3">Part 3: Processing Videos with the Trained Model</h1>
 The input into AdaptedNeuralNet.ipynb, then, is three sets (folders) of files:
 <br/><br/>
 
@@ -105,7 +113,7 @@ Note that AdaptedNeuralNet.ipynb currently expects three folders with these exac
 <li>Run the analysis.</li>
 </ul>
 
-<h1>Part 4</h1>
+<h1 id="p4">Part 4: Extracting Descriptive Information</h1>
 
 <h3>Producing the Excel file</h3>
 <p>In order to produce the Excel file with predictions you need to follow this procedure:</p>
